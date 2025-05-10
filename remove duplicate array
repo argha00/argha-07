@@ -1,0 +1,23 @@
+import java.util.*;
+
+public class RemoveDuplicates {
+    public static void main(String[] args) {
+        int[] originalArray = {1,2,2,3,4};
+
+        Set<Integer> uniqueSet = new LinkedHashSet<>();
+        for (int num : originalArray) {
+            uniqueSet.add(num);
+        }
+
+
+        int[] uniqueArray = new int[uniqueSet.size()];
+        int index = 0;
+        for (int num : uniqueSet) {
+            uniqueArray[index++] = num;
+        }
+
+ 
+        System.out.println("Original array: " + Arrays.toString(originalArray));
+        System.out.println("Array without duplicates: " + Arrays.toString(uniqueArray));
+    }
+}
