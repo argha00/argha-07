@@ -1,24 +1,18 @@
-import java.util.*;
+import java.util.HashSet;
 
-public class Distinctelements {
+public class DistinctElements {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        System.out.print("Enter the number of elements: ");
-        int n = sc.nextInt();
-        int[] arr = new int[n];
-        
-        System.out.println("Enter the elements:");
-        for (int i = 0; i < n; i++) {
-            arr[i] = sc.nextInt();
-            
+        int[] array = {5,1,2,3,3,4};
+
+        HashSet<Integer> distinct = new HashSet<>();
+
+        for (int num : array) {
+            distinct.add(num);
         }
-        
-        Set<Integer> distinctElements = new HashSet<>();
-        for (int i = 0; i < n; i++) {
-            distinctElements.add(arr[i]);
+
+        System.out.println("Distinct elements in the array:");
+        for (int num : distinct) {
+            System.out.print(num + " ");
         }
-        
-        // System.out.println("Distinct elements are: " + distinctElements);
-        System.out.println("Count of distinct elements: " + distinctElements.size());
     }
 }
