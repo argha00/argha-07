@@ -1,0 +1,22 @@
+public class SetBitsCounter {
+
+    // Function to count set bits using right shift operator
+    public static int countSetBits(int num) {
+        int count = 0;
+        
+        while (num != 0) {
+            if ((num & 1) == 1) {
+                count++;
+            }
+            num = num >> 1; // Right shift the bits
+        }
+
+        return count;
+    }
+
+    public static void main(String[] args) {
+        int number = 29; // Example number (binary: 11101)
+        int setBits = countSetBits(number);
+        System.out.println("Number of set bits in " + number + " is: " + setBits);
+    }
+}
